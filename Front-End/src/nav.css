@@ -108,6 +108,7 @@
   top: 25%;
 }
 
+@media (width > 768px){
 .Nav_logo {
   position: absolute;
   top: -100px; /* Adjust the initial position off the screen */
@@ -128,7 +129,30 @@
     top: 30%; /* Adjust the desired position */
     opacity: 1;
   }
-}
+}}
+
+@media (width < 768px){
+  .Nav_logo {
+    position: absolute;
+    top: -100px; /* Adjust the initial position off the screen */
+    opacity: 0;
+    animation-name: slideFromTopLogo3;
+    animation-duration: 1s;
+    animation-delay: 0.5s; /* Delay the animation for 0.5 seconds */
+    animation-fill-mode: forwards;
+    transition: 300ms ease-in-out;
+  }
+  
+  @keyframes slideFromTopLogo3 {
+    0% {
+      top: -100px;
+      opacity: 0;
+    }
+    100% {
+      top: 5%; /* Adjust the desired position */
+      opacity: 1;
+    }
+  }}
 
 .nav ul {
   list-style: none;
