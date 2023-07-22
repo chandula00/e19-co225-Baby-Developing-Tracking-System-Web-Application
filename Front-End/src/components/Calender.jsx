@@ -5,7 +5,7 @@ import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import axios from "axios";
 import { sampleAppointments } from "../components/SampleAppointments";
 
-const useSampleAppointments = false; // Set this to true to use the sampleAppointments data
+const useSampleAppointments = true; // Set this to true to use the sampleAppointments data
 
 export default function Calendar({ appointmentSet, onClicks }) {
   const days = ["S", "M", "T", "W", "T", "F", "S"];
@@ -22,6 +22,7 @@ export default function Calendar({ appointmentSet, onClicks }) {
         let response;
         if (useSampleAppointments) {
           response = { data: sampleAppointments }; // Use the sampleAppointments data
+          console.log(sampleAppointments);
         } else {
           response = { data: appointmentSet };
         }
