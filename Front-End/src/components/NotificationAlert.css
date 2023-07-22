@@ -52,6 +52,7 @@
   max-height: 55vh;
   min-height: 30vh;
   overflow-y: auto;
+  z-index: 999;
 }
 
 .dropdown p {

@@ -37,7 +37,7 @@ export const Nav = () => {
       });
     });
 
-    menuBtn.addEventListener("click",() => {
+    menuBtn.addEventListener("click", () => {
       menuBtn.classList.toggle("open");
       navUl.classList.toggle("open");
     });
@@ -126,7 +126,7 @@ export const Nav = () => {
 
           {currentUser ? (
             <li
-              className="logout-button border-2 border-gray-700"
+              className="logout-button z-10 border-2 border-gray-700"
               onClick={() => handleLogout()}
             >
               <i className="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log Out

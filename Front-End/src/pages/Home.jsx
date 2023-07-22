@@ -6,8 +6,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import AuthService from "../services/auth.service";
 
 const images = [
-  "src/assets/Background_Blur4.png",
-  "src/assets/Background_Blur5.png",
+  "/assets/Background_Blur4.png",
+  "/assets/Background_Blur5.png",
 
   // Add more image paths as needed
 ];
@@ -94,7 +94,7 @@ export const Home = () => {
               </p>
             )}
           </div>
-          <img src="src\assets\pngwing.com.png" className="Baby_landing"></img>
+          <img src="\assets\pngwing.com.png" className="Baby_landing"></img>
         </div>
       </div>
     </div>
