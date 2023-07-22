@@ -86,7 +86,7 @@ export const Nav = () => {
             align="center"
             alt="logo"
             className="logo"
-            src="src\assets\Sproutopia_navbar_logo.png"
+            src="\assets\Sproutopia_navbar_logo.png"
             onClick={() => handleItemClick("/Home")}
           />
         ) : (
@@ -94,7 +94,7 @@ export const Nav = () => {
             align="center"
             alt="logo"
             className="Nav_logo"
-            src="src\assets\Sproutopia_navbar_logo.png"
+            src="\assets\Sproutopia_navbar_logo.png"
             onClick={() => handleItemClick("/Home")}
           />
         )}
