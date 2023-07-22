@@ -1,10 +1,11 @@
 import "./Footer.css";
 import { useNavigate, useLocation, Form } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+
 
 export const Footer = () => {
   const navigate = useNavigate();
   const handleItemClick = (path) => {
+    console.log(path);
     navigate(path);
   };
   return (
@@ -12,19 +13,11 @@ export const Footer = () => {
       <div className="legal">
         <div className="words">
           <span> © 2023 All rights reserved </span>
-          {/* <a> License </a>
-          <a> Terms </a>
-          <a>  </a> */}
-          <form className="flex gap-5">{/* <input
-                      type="text"
-                      id="Parent"
-                      name="role"
-                      value={role}
-                      onChange={(e) => setRole(e.target.value)}
-                    /> */}
-          <a><button type="submit" onClick={handleItemClick("/parent")}>License</button></a>
-          <a><button type="submit" onClick={handleItemClick("/midwife")}>Terms</button></a>
-          <a><button type="submit" onClick={handleItemClick("/doctor")}>Privacy</button></a></form>
+          <ul className="flex gap-5">
+            <button onClick={() => {handleItemClick("/parent")}}> License </button>
+            <button onClick={() => {handleItemClick("/midwife")}}> Terms </button>
+            <button onClick={() => {handleItemClick("/doctor")}}> Privacy </button>
+          </ul>
         </div>
       </div>
     </footer>

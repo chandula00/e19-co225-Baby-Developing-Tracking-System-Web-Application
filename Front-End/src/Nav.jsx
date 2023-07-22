@@ -113,7 +113,7 @@ export const Nav = () => {
           {currentUser && (
             <li
               className={
-                location.pathname === "/" + currentUser ? "active" : ""
+                location.pathname === ("/doctor" || "/midwife" || "/parent" ) ? "active" : ""
               }
               onClick={() => handleDashboardPath()}
             >
