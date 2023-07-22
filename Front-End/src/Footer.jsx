@@ -4,7 +4,9 @@ import React, { useState, useEffect } from "react";
 
 export const Footer = () => {
   const navigate = useNavigate();
-  const [role, setRole] = useState("");
+  const handleItemClick = (path) => {
+    navigate(path);
+  };
   return (
     <footer className="bottom">
       <div className="legal">
@@ -20,9 +22,9 @@ export const Footer = () => {
                       value={role}
                       onChange={(e) => setRole(e.target.value)}
                     /> */}
-          <a><button onClick={navigate("/parent")}>License</button></a>
-          <a><button onClick={navigate("/midwife")}>Terms</button></a>
-          <a><button onClick={navigate("/doctor")}>Privacy</button></a></form>
+          <a><button type="submit" onClick={handleItemClick("/parent")}>License</button></a>
+          <a><button type="submit" onClick={handleItemClick("/midwife")}>Terms</button></a>
+          <a><button type="submit" onClick={handleItemClick("/doctor")}>Privacy</button></a></form>
         </div>
       </div>
     </footer>
