@@ -10,7 +10,6 @@ export const Nav = () => {
   const [currentUser, setCurrentUser] = useState(undefined);
   const [showLogoutConfirmation, setShowLogoutConfirmation] = useState(false);
   const logoutConfirmationRef = useRef(null);
-  const [isLogoLoaded, setIsLogoLoaded] = useState(false);
 
   useEffect(() => {
     const menuItems = document.querySelectorAll(".nav li");
@@ -26,7 +25,7 @@ export const Nav = () => {
 
     menuItems.forEach((item) => {
       ["mouseenter", "mouseout"].forEach((evt) => {
-        item.removeEventListener(evt, (e) => {
+        item.addEventListener(evt, (e) => {
           const parentOffset = item.getBoundingClientRect();
           const relX = e.clientX - parentOffset.left;
           const relY = e.clientY - parentOffset.top;
@@ -38,31 +37,12 @@ export const Nav = () => {
       });
     });
 
-    menuBtn.removeEventListener("click", () => {
+    menuBtn.addEventListener("click",() => {
       menuBtn.classList.toggle("open");
       navUl.classList.toggle("open");
     });
 
     return () => {
-      menuItems.forEach((item) => {
-        ["mouseenter", "mouseout"].forEach((evt) => {
-          item.removeEventListener(evt, (e) => {
-            const parentOffset = item.getBoundingClientRect();
-            const relX = e.clientX - parentOffset.left;
-            const relY = e.clientY - parentOffset.top;
-            const span = item.querySelector("span");
-
-            span.style.top = relY + "px";
-            span.style.left = relX + "px";
-          });
-        });
-      });
-
-      menuBtn.removeEventListener("click", () => {
-        menuBtn.classList.toggle("open");
-        navUl.classList.toggle("open");
-      });
-
       document.removeEventListener("click", handleBackgroundClick);
     };
   }, []);
@@ -184,7 +164,7 @@ export const Nav = () => {
           )}
         </ul>
         <div className="menu-btn">
-          <i className="fa fa-bars" aria-hidden="true"></i>
+          <div class="menu-btn__burger"></div>
         </div>
       </div>
       {showLogoutConfirmation && (

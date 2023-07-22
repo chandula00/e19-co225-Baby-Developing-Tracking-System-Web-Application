@@ -14,7 +14,7 @@ const NotificationAlertIcon = () => {
       try {
         const token = JSON.parse(localStorage.getItem("user"));
         const access = token.access_token;
-        console.log(access);
+        //console.log(access);
 
         const response = await axios.get(
           "http://localhost:8080/api/v1/notifications/get",
@@ -27,7 +27,7 @@ const NotificationAlertIcon = () => {
 
         const contentArray = response.data.map((obj) => obj.content);
         setNotifications(contentArray);
-        console.log(contentArray);
+        //console.log(contentArray);
       } catch (error) {
         console.error("Error fetching notifications:", error);
         setNotifications([
