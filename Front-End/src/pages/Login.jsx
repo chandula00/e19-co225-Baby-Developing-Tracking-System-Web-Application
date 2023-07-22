@@ -60,7 +60,7 @@ export const Login = () => {
       <div className="">
         <div className="auth-form-cantainer">
           <div className="auth-logo">
-            <img src="src\assets\Sproutopia_SignIn_logo.png"></img>
+            <img src="\assets\Sproutopia_SignIn_logo.png"></img>
           </div>
           <div className="login-form-cantainer">
             <h2>

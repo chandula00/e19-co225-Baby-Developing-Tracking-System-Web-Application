@@ -69,7 +69,7 @@ export const Register = (props) => {
         <div className="relative  rounded-lg ">
           <div className="auth-form-container">
             <div className="auth-logo">
-              <img src="src\assets\Sproutopia_SignIn_logo.png"></img>
+              <img src="\assets\Sproutopia_SignIn_logo.png"></img>
             </div>
             <div className="register-form-container">
               <h2>
