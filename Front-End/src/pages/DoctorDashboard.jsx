@@ -76,7 +76,7 @@ const DoctorDashboard = () => {
     },
   ];
 
-  const [selectedBabyTableData, setSelectedBabyTableData] = useState([]);
+  const [selectedBabyTableData, setSelectedBabyTableData] = useState(babyTableData);
 
   const [appointmentsSet, setAppointmentsSet] = useState([]);
 
