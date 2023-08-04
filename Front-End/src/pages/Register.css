@@ -8,7 +8,7 @@
   color: rgb(12, 0, 0);
   font-family: "Euclid Circular A";
   margin: 0.5rem;
-  background-image: url("src/assets/page_background.png");
+  background-image: url("/assets/page_background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
