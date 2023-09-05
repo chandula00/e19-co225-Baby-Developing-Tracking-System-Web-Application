@@ -26,7 +26,7 @@ Follow these steps to set up a React page:
 
 2. Navigate to the project directory:
     ```
-    cd my-react-page
+    cd <project-name>
     ```
 ### After Creating Project or Cloning the existing Project    
 3. Install project dependencies by running the following command:
